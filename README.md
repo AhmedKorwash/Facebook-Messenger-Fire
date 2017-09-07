@@ -1,6 +1,11 @@
 # Facebook-Messenger-Fire
 This is free tool for scrape and target your audience on facebook and messaging them
 
+# Nuget Packege Requier:
+- Install-Package Facebook -Version 7.0.6	
+- Install-Package MetroFramework -Version 1.2.0.3	
+
+
 # What is Facebook Messenger Fire?
 - Login : Login with Your FB Account, you need to turn of your [ 2 step factor ] while you login ,
           but you can change it again on later.
