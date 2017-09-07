@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBMessangerFire", "FBMessangerFire\FBMessangerFire.csproj", "{3788F87B-D031-4A55-B1FA-7443585DAA2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookMessageSender", "FacebookMessageSender\FacebookMessageSender.csproj", "{E74CD999-FB20-43C6-ABA3-DEC833A1033A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3788F87B-D031-4A55-B1FA-7443585DAA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3788F87B-D031-4A55-B1FA-7443585DAA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3788F87B-D031-4A55-B1FA-7443585DAA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3788F87B-D031-4A55-B1FA-7443585DAA2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74CD999-FB20-43C6-ABA3-DEC833A1033A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74CD999-FB20-43C6-ABA3-DEC833A1033A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74CD999-FB20-43C6-ABA3-DEC833A1033A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74CD999-FB20-43C6-ABA3-DEC833A1033A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
