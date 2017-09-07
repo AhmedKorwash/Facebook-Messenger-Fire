@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +19,8 @@ namespace FBMessangerFire.Target
         private List<SucsessGrid> dtsucess = null;
         private List<FiledGrid> dterror = null;
         private int SentCount = 0;
-        /// <summary>
-        /// This is CancellationToken sent with task that make us able to stop this task or cancel it
-        /// </summary>
-        private CancellationToken token;
-        /// <summary>
-        /// this is Source for CancellationToken through it we can Canceling it.
-        /// </summary>
-        private CancellationTokenSource source;
+        
+        private Thread source;
         /// <summary>
         /// Here the list of message content to be sent randomaly
         /// </summary>
@@ -62,14 +56,10 @@ namespace FBMessangerFire.Target
             messagesContent = new List<string>();
             messagesContent.AddRange(mess);
 
-            //be able to cancel the operation at any time we need
-            source = new CancellationTokenSource();
-            token = source.Token;
-
             // Set Progresspar value = 0
             if (this.progressPar.InvokeRequired) progressPar.Invoke((MethodInvoker)delegate { progressPar.Value = 0; }); else progressPar.Value = 0;
             request = new FacebookHttpRequest();
-            Task.Factory.StartNew(() =>
+            source = new Thread(() =>
             {
                 foreach (var user in TargetUsers)
                 {
@@ -81,13 +71,14 @@ namespace FBMessangerFire.Target
                     });
                     SetDelay(CampaignType);
                 }
-            }, token);
+            });
+            source.Start();
         }
         public void StopMessageingFire()
         {
             if (source != null)
             {
-                source.Cancel();
+                source.Abort();
             }
         }
         /// <summary>
